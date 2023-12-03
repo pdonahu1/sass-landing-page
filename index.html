@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page | Growth, Inc</title>
+    <link rel="stylesheet" href= 
+"https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    
+    <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAD////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////48///9vD////////////////////////////////////////////////////////////////////////o2f//rHT//6lw///ZwP//+/j/////////////////////////////////////////////////////////////xJ7//5FI//+RSP//kkr//7SC///x6P///v7//////////////////////////////////////////////////93H//+XUv//kUj//5FI//+RSP//m1n//9Cx///8+f//////////////////////////////////////////////////5tX//6tz//+RSP//kUj//5FI//+RSP//q3P//+jZ///////////////////////////////////////////////////59f//z7D//5pX//+RSP//kUj//5FI//+iZP//8Of///////////////////////////////////////////////////79///r3v//s4D//5NM//+RSP//nVz//+7i//////////////////////////////////////////////////////////////r2///Vuf//s4D//9O1///9+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==" type="image/x-icon" />    
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('AajxFYnL5uc9w1eXN');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_tvveioi', 'template_lmbndav', this)
+                    .then(function() {
+                        console.log('Awesome! SUCCESS!');
+                        alert("Awesome! Your message was sent successfully");
+                    }, function(error) {
+                        console.log('Oh no! It looked like the message could not be sent...', error);
+                    });
+            });
+        }
+    </script>
+      <script type="module" crossorigin src="/assets/index-ThyPiLKK.js"></script>
+      <link rel="stylesheet" crossorigin href="/assets/index-wdsEcQBm.css">
+    </head>
+  <body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">
+            <img src="data:image/png;base64,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" alt="logo" />
+          </a>
+        </div>
+
+        <div class="main-menu">
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="#">Services</a>
+            </li>
+            <li>
+              <a href="#faq">FAQ</a>
+            </li>
+            <li>
+              <a href="#">Blog</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+            <li>
+              <a class="btn" href="#"> <i class="fas fa-user"></i> Log In </a>
+            </li>
+          </ul>
+        </div>
+        <!-- Hamburger Button -->
+        <button class="hamburger-button">
+          <div class="hamburger-line"></div>
+          <div class="hamburger-line"></div>
+          <div class="hamburger-line"></div>
+        </button>
+        <div class="mobile-menu">
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="#">Services</a>
+            </li>
+            <li>
+              <a href="#faq">FAQ</a>
+            </li>
+            <li>
+              <a href="#">Blog</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+            <li>
+              <a class="btn" href="#"> <i class="fas fa-user"></i> Log In </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-heading text-xxl">
+            A powerful solution to grow your startup. Fast!
+          </h1>
+          <p class="hero-text">
+            Organize, collaborate, and track progress seamlessly with our
+            one-stop-shop startup growth tool.
+          </p>
+          <div class="hero-buttons">
+            <a href="#" class="btn btn-primary">Get Started</a>
+            <a href="#" class="btn"
+              ><i class="fas fa-laptop"></i> Book a Demo</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Video Section -->
+    <section class="video bg-black">
+      <div class="container-sm">
+        <h2 class="video-heading text-xl text-center">
+          See how it works and get started in less than 2 minutes
+        </h2>
+        <div class="video-content">
+          <a href="#">
+            <img
+              src="/assets/video-preview-9sg67BMU.png"
+              alt="video"
+              class="video-preview"
+            />
+          </a>
+
+          <a href="#" class="btn btn-primary">Get Started</a>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonials -->
+    <section class="testimonials bg-dark">
+      <div class="container">
+        <h3 class="testimonials-heading text-xl">
+          Don't just take our word for it, see the success stories from
+          businesses just like yours.
+        </h3>
+        <div class="testimonials-grid">
+          <div class="card">
+            <p>
+              “Our business has seen a significant increase in productivity
+              since we started using the Growth app.”
+            </p>
+
+            <p>Katherine Smith</p>
+            <p>Cloudflare, Inc.</p>
+          </div>
+
+          <div class="card">
+            <p>
+              “As a small business owner, it's important to have a tool that can
+              help me keep track of everything. The Growth app has been a
+              lifesaver for me, allowing me to manage my contacts, schedule
+              appointments, and track progress all in one place..”
+            </p>
+
+            <p>Johnathan Lee</p>
+            <p>Owner of Google</p>
+          </div>
+
+          <div class="card">
+            <p>
+              “The dashboards and reporting feature has provided valuable
+              insights into our performance and helped us make data-driven
+              decisions. It's a game changer for us.”
+            </p>
+
+            <p>David Wilson</p>
+            <p>CEO, Amazon</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <!-- Pricing -->
+    <section class="pricing">
+      <div class="container-sm">
+        <h3 class="pricing-heading text-xl text-center">Pricing</h3>
+        <p class="pricing-subheading text-md text-center">
+          Start free and scale while you grow. No hidden fees. Unlimited users
+          for free.
+        </p>
+        <div class="pricing-grid">
+          <!-- Pricing Card 1 -->
+          <div class="card bg-light">
+            <div class="pricing-card-header">
+              <h4 class="pricing-heading text-xl">Simple</h4>
+              <p class="pricing-card-subheading">
+                Keep track of your contacts, gain valuable insights, analyse
+                live data and performance metrics.
+              </p>
+              <p class="pricing-card-price">
+                <span class="text-xl">Free</span>
+                *No credit card needed
+              </p>
+            </div>
+            <div class="pricing-card-body">
+              <ul>
+                <li><i class="fas fa-check"></i> Real-Time Monitoring</li>
+                <li>
+                  <i class="fas fa-check"></i>Track key performance indicators
+                </li>
+                <li><i class="fas fa-check"></i>Schedule appointments</li>
+                <li>
+                  <i class="fas fa-check"></i>Organize, delegate and keep track
+                  of tasks
+                </li>
+              </ul>
+              <a href="#" class="btn btn-primary btn-block">Get Started</a>
+            </div>
+          </div>
+
+          <!-- Pricing Card 2 -->
+          <div class="card bg-black">
+            <div class="pricing-card-header">
+              <h4 class="pricing-card-heading text-xl">Premium</h4>
+              <p class="pricing-card-subheading">
+                Keep track of your contacts, gain valuable insights, analyze
+                live data and performance metrics.
+              </p>
+              <p class="pricing-card-price">
+                <span class="text-xl">$49</span> /month
+              </p>
+            </div>
+            <div class="pricing-card-body">
+              <p>Everything from the free plan plus:</p>
+              <ul>
+                <li><i class="fas fa-check"></i>Data-driven decisions</li>
+                <li><i class="fas fa-check"></i>Data visualization</li>
+                <li><i class="fas fa-check"></i>Schedule appointments</li>
+              </ul>
+              <a href="#" class="btn btn-primary btn-block">Get Started</a>
+            </div>
+          </div>
+        </div>
+        <p class="pricing-footer text-center">
+          All prices are in USD and charged per month with applicable taxes
+          added at checkout.
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+
+    <section id="faq" class="faq bg-light">
+      <div class="container-sm">
+        <h3 class="text-xl text-center">Frequently Asked Questions</h3>
+        <ul class="faq-menu">
+          <li class="active">All</li>
+          <li>Getting Started</li>
+          <li>Pricing</li>
+        </ul>
+        <div class="faq-content">
+          <div class="faq-group">
+            <div class="faq-group-header">
+              <h4 class="text-md">
+                How does the contact management feature help me keep track of
+                clients and partners?
+              </h4>
+              <i class="fas fa-minus"></i>
+            </div>
+            <div class="faq-group-body open">
+              <p>
+                Keep track of your contacts, gain valuable insights, analyse
+                live data and performance metrics.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-group">
+            <div class="faq-group-header">
+              <h4 class="text-md">
+                Can I customize the dashboards and reporting feature to display
+                the metrics that are most important to my business?
+              </h4>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-group-body">
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad
+                culpa enim blanditiis rem ipsum aliquam, unde iste fugit
+                praesentium eos?
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-group">
+            <div class="faq-group-header">
+              <h4 class="text-md">
+                How does the task management feature help me delegate tasks to
+                my team and track progress?
+              </h4>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-group-body">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Incidunt, a! Quaerat, voluptatum. Animi molestias ex quasi
+                explicabo minima perferendis commodi.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-group">
+            <div class="faq-group-header">
+              <h4 class="text-md">
+                Can I collaborate with my team in real-time using all tools?
+              </h4>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-group-body">
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Obcaecati doloremque assumenda aut dolorem recusandae quibusdam
+                aliquid. Repellat animi quam vitae.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-group">
+            <div class="faq-group-header">
+              <h4 class="text-md">Is the app available on all devices?</h4>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-group-body">
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Obcaecati doloremque assumenda aut dolorem recusandae quibusdam
+                aliquid. Repellat animi quam vitae.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-group">
+            <div class="faq-group-header">
+              <h4 class="text-md">
+                How does the app help me stay compliant when working with
+                freelancers and contractors?
+              </h4>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-group-body">
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Obcaecati doloremque assumenda aut dolorem recusandae quibusdam
+                aliquid. Repellat animi quam vitae.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="contact"></div>
+      </div>
+    </section>
+
+<!-- Form Area -->
+
+<section class="pricing">
+  <div class="container">
+    <div class="pricing-grid">
+      <div class="card bg-light">
+        <div class="pricing-card-header">
+        <h3 class="text-xl text-center fw-bold">Need additional Information?</h3>
+        <hr class="hr-heading" />
+            <p class="lead">
+              We provide innovative software solutions that empower businesses to
+              thrive in the digital era.
+            </p>
+            <ul class="list-unstyled lh-lg">
+              <li class="d-flex align-items-center">
+                <i class="fas fa-check text-primary mx-3"></i>
+                <div>
+                  <strong>Customized Solutions: </strong> Our solutions are designed
+                  to meet your specific business needs, ensuring maximum efficiency
+                  and productivity.
+                </div>
+              </li>
+              <li class="d-flex align-items-center">
+                <i class="fas fa-check text-primary mx-3"></i>
+                <div>
+                  <strong>Seamless Integration:</strong> We seamlessly integrate our
+                  software with your existing systems, minimizing disruptions and
+                  optimizing workflows.
+                </div>
+                </li>
+              </li>
+            </ul>
+          </div>
+          </div>
+      
+          <div class="card bg-light">
+            <div class="pricing-card-header">
+        <form id="contact-form">
+          <input type="hidden" name="contact_number">
+          <div class="form-floating">
+            <input type="text" name="name" class="form-control rounded bg-light" id="floatingName" placeholder="Name" required>
+            <label for="floatingName">Name</label>
+          </div>
+          <div class="form-floating">
+            <input type="email" name="email" class="form-control rounded bg-light" id="floatingEmail" placeholder="Email" required>
+            <label for="floatingEmail">Email</label>
+          </div>
+          <div class="form-floating">
+            <input type="phone" name="phone" class="form-control rounded bg-light" id="floatingPhone" placeholder="Phone">
+            <label for="floatingPhone">Phone</label>
+          </div>
+          <div class="mb-4">
+            <h6>I'm Interested In:</h6>
+              <select name="interested" class="form-control rounded bg-light" multiple required>
+              <option value="Enterprise Resource Planning">ERP Solution</option>
+              <option value="Customer Relationship Management">CRM Solution</option>
+              <option value="Content Management System">CMS Solution</option>
+              <option value="Sales Force Management">SFA Solution</option>
+            </select>
+            </div>
+            <div class="form-floating">
+            <textarea name="message" class="form-control rounded bg-light" id="floatingTextarea" placeholder="It is necessary to have a placeholder" style="height:220px"></textarea>
+            <label for="floatingTextarea">Include a message...</label>
+          </div>
+          <div class="mt-4">
+            <input type="checkbox" name="agree-check" class="form-policy-check" id="agree-check" value="Yes" required />
+            <label for="agree-check" class="form-policy-check">
+              I agree to the <i class="fa-solid fa-xs fa-link"></i> <a href="privacy.html">Privacy Policy</a>
+            </label>
+          </div>
+          <div class="d-grid gap-2">
+            <button type="submit" class="btn2 btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+    <!-- Footer -->
+    
+    <footer class="footer bg-black">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <a href="index.html">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH4AAAAjCAYAAABSM76hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFyWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgOS4xLWMwMDEgNzkuMTQ2Mjg5OSwgMjAyMy8wNi8yNS0yMDowMTo1NSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDI0LjcgKFdpbmRvd3MpIiB4bXA6Q3JlYXRlRGF0ZT0iMjAyMy0xMC0xMFQwOTo1Nzo1Ny0wNDowMCIgeG1wOk1vZGlmeURhdGU9IjIwMjMtMTAtMTFUMTA6MDU6MzEtMDQ6MDAiIHhtcDpNZXRhZGF0YURhdGU9IjIwMjMtMTAtMTFUMTA6MDU6MzEtMDQ6MDAiIGRjOmZvcm1hdD0iaW1hZ2UvcG5nIiBwaG90b3Nob3A6Q29sb3JNb2RlPSIzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjliMTI1YzI4LTIzODItYmQ0YS1iZTM4LWJiOWMwOGZhOGI0OCIgeG1wTU06RG9jdW1lbnRJRD0i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" alt="logo" />
+            </a>
+            <div class="card">
+              <h4>Subscribe to Newsletter</h4>
+              <p class="text-sm">
+                Subscribe now to receive tips on how to take your business to
+                the next level.
+              </p>
+              <form>
+                <input type="email" id="email" placeholder="Enter your email" />
+                <button type="submit" class="btn btn-primary btn-block">
+                  Subscribe
+                </button>
+              </form>
+            </div>
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-twitter"></i>
+          </div>
+          <div class="col-md-4">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Our Process</a></li>
+              <li><a href="#">Join Our Team</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Research</a></li>
+              <li><a href="#">Recent Projects</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="#">hello@growthapp.com</a></li>
+              <li><a href="#">Address</a></li>
+              <li><a href="#">Address 2</a></li>
+              <li><a href="#">Phone</a></li>
+            </ul>
+          </div>
+        </div>
+        
+    </footer>
+
+  </body>
+</html>
